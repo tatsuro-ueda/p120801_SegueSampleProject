@@ -13,6 +13,7 @@
 @end
 
 @implementation ViewController
+@synthesize textView;
 
 - (void)viewDidLoad
 {
@@ -22,6 +23,7 @@
 
 - (void)viewDidUnload
 {
+    [self setTextView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -31,4 +33,7 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
+- (IBAction)loadText:(id)sender {
+    self.textView.text = [NSString stringWithContentsOfURL:[NSURL URLWithString:@"http://www.nicovideo.jp/watch/1343369790"] encoding:NSUTF8StringEncoding error:nil];
+}
 @end

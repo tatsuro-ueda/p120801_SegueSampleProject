@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  NextViewController.h
 //  SegueSample
 //
 //  Created by 達郎 植田 on 12/08/01.
@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface NextViewController : UIViewController
 
-@property (strong, nonatomic) IBOutlet UITextView *textView;
-- (IBAction)loadText:(id)sender;
+- (IBAction)back:(id)sender;
 @end
